@@ -23,9 +23,9 @@ body {
 
 .hidden { display: none; }
 
-/* TITEL EN BORD FIX VOOR MOBIEL EN LAPTOP */
+/* TITEL */
 h1 {
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     text-shadow: 0 0 20px #00ffea;
     margin-bottom: 8px;
 }
@@ -47,10 +47,10 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* BOARD FIX VOOR LAPTOP/MOBIEL */
+/* BOARD */
 #board {
-    /* Cell size reageert op viewport, maar blijft binnen een maximum zodat er niet gescrolled hoeft te worden */
-    --cell-size: min(9vh, 9vw, 70px);
+    /* cell-size automatisch groter op mobiel, maar past op laptop */
+    --cell-size: min(12vw, 10vh, 80px);
 
     display: grid;
     grid-template-columns: repeat(7, var(--cell-size));
