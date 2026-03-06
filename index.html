@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Connect 4 - AI</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg">
+
+</head>
+<body>
+
+<div id="start-screen" class="center-screen">
+    <h1>Connect 4</h1>
+
+    <label>
+        <input type="checkbox" id="toggle-ai" checked> AI aan
+    </label>
+
+    <button id="start-btn">Start Game</button>
+</div>
+
+
+<div id="game-screen" class="hidden center-screen">
+    <h1>Connect 4</h1>
+
+    <div id="board"></div>
+
+    <p id="status" aria-live="polite">Jouw beurt</p>
+
+    <div>
+        <button id="restart-btn">Restart</button>
+        <button id="back-btn">Terug naar start</button>
+
+        <label>
+            <input type="checkbox" id="ai-toggle-game"> AI aan
+        </label>
+    </div>
+</div>
+
+
+<div id="win-screen">
+    <div id="win-message">
+        <p id="win-text"></p>
+
+        <button id="win-restart">Opnieuw</button>
+        <button id="win-back">Terug naar start</button>
+    </div>
+</div>
+
+
+<audio id="drop-sound" src="sound_effects/drop.mp3"></audio>
+<audio id="win-sound" src="sound_effects/win.mp3"></audio>
+<audio id="lose-sound" src="sound_effects/lose.mp3"></audio>
+<audio id="click-sound" src="sound_effects/click.mp3"></audio>
+
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
