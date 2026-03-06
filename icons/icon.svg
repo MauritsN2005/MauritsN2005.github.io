@@ -1,6 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 
 <defs>
+  <!-- Glow effect for text -->
+  <filter id="glowText" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Glow for red and yellow pieces -->
   <filter id="glowRed">
     <feGaussianBlur stdDeviation="2.5" result="blur"/>
     <feMerge>
@@ -20,18 +30,19 @@
 
 <rect width="512" height="512" fill="black"/>
 
+<!-- Titel met glow -->
 <text x="256" y="70"
-text-anchor="middle"
-font-size="64"
-font-family="Arial, Helvetica, sans-serif"
-fill="#35f2e5">
-Connect 4
+      text-anchor="middle"
+      font-size="64"
+      font-family="Arial, Helvetica, sans-serif"
+      fill="#35f2e5"
+      filter="url(#glowText)">
+  Vier op een rij
 </text>
 
 <g stroke="#35f2e5" stroke-width="6" fill="none">
 
 <!-- Grid -->
-<!-- Row 1 -->
 <circle cx="64" cy="120" r="24"/>
 <circle cx="128" cy="120" r="24"/>
 <circle cx="192" cy="120" r="24"/>
@@ -40,7 +51,6 @@ Connect 4
 <circle cx="384" cy="120" r="24"/>
 <circle cx="448" cy="120" r="24"/>
 
-<!-- Row 2 -->
 <circle cx="64" cy="184" r="24"/>
 <circle cx="128" cy="184" r="24"/>
 <circle cx="192" cy="184" r="24"/>
@@ -49,7 +59,6 @@ Connect 4
 <circle cx="384" cy="184" r="24"/>
 <circle cx="448" cy="184" r="24"/>
 
-<!-- Row 3 -->
 <circle cx="64" cy="248" r="24"/>
 <circle cx="128" cy="248" r="24"/>
 <circle cx="192" cy="248" r="24"/>
@@ -58,7 +67,6 @@ Connect 4
 <circle cx="384" cy="248" r="24"/>
 <circle cx="448" cy="248" r="24"/>
 
-<!-- Row 4 -->
 <circle cx="64" cy="312" r="24"/>
 <circle cx="128" cy="312" r="24"/>
 <circle cx="192" cy="312" r="24"/>
@@ -67,7 +75,6 @@ Connect 4
 <circle cx="384" cy="312" r="24"/>
 <circle cx="448" cy="312" r="24"/>
 
-<!-- Row 5 -->
 <circle cx="64" cy="376" r="24"/>
 <circle cx="128" cy="376" r="24"/>
 <circle cx="192" cy="376" r="24"/>
@@ -76,7 +83,6 @@ Connect 4
 <circle cx="384" cy="376" r="24"/>
 <circle cx="448" cy="376" r="24"/>
 
-<!-- Row 6 -->
 <circle cx="64" cy="440" r="24"/>
 <circle cx="128" cy="440" r="24"/>
 <circle cx="192" cy="440" r="24"/>
@@ -85,15 +91,15 @@ Connect 4
 <circle cx="384" cy="440" r="24"/>
 <circle cx="448" cy="440" r="24"/>
 
-<!-- Connect 4 -->
-<circle cx="128" cy="248" r="16" fill="#ff3b3b" stroke="none" filter="url(#glowRed)"/>
-<circle cx="192" cy="248" r="16" fill="#ff3b3b" stroke="none" filter="url(#glowRed)"/>
-<circle cx="256" cy="248" r="16" fill="#ff3b3b" stroke="none" filter="url(#glowRed)"/>
-<circle cx="320" cy="248" r="16" fill="#ff3b3b" stroke="none" filter="url(#glowRed)"/>
-
-<circle cx="192" cy="312" r="16" fill="#ffd93b" stroke="none" filter="url(#glowYellow)"/>
-<circle cx="256" cy="312" r="16" fill="#ffd93b" stroke="none" filter="url(#glowYellow)"/>
-
 </g>
+
+<!-- Gespeelde stukken volledig gevuld -->
+<circle cx="128" cy="248" r="24" fill="#ff3b3b" filter="url(#glowRed)"/>
+<circle cx="192" cy="248" r="24" fill="#ff3b3b" filter="url(#glowRed)"/>
+<circle cx="256" cy="248" r="24" fill="#ff3b3b" filter="url(#glowRed)"/>
+<circle cx="320" cy="248" r="24" fill="#ff3b3b" filter="url(#glowRed)"/>
+
+<circle cx="192" cy="312" r="24" fill="#ffd93b" filter="url(#glowYellow)"/>
+<circle cx="256" cy="312" r="24" fill="#ffd93b" filter="url(#glowYellow)"/>
 
 </svg>
