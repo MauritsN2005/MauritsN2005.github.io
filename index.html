@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Connect 4 - AI</title>
+<title>4 op een rij</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon.svg">
-
 </head>
 <body>
 
 <div id="start-screen" class="center-screen">
-    <h1>Connect 4</h1>
+    <h1>4 op een rij</h1>
 
-    <label>
-        <input type="checkbox" id="toggle-ai" checked> AI aan
-    </label>
+    <button id="toggle-ai-start" class="ai-btn">AI uit</button>
 
     <button id="start-btn">Start Game</button>
 </div>
 
-
 <div id="game-screen" class="hidden center-screen">
-    <h1>Connect 4</h1>
+    <h1>4 op een rij</h1>
+
+    <button id="toggle-ai-game" class="ai-btn">AI uit</button>
 
     <div id="board"></div>
 
@@ -35,13 +32,8 @@
     <div>
         <button id="restart-btn">Restart</button>
         <button id="back-btn">Terug naar start</button>
-
-        <label>
-            <input type="checkbox" id="ai-toggle-game"> AI aan
-        </label>
     </div>
 </div>
-
 
 <div id="win-screen">
     <div id="win-message">
@@ -51,7 +43,6 @@
         <button id="win-back">Terug naar start</button>
     </div>
 </div>
-
 
 <audio id="drop-sound" src="sound_effects/drop.mp3"></audio>
 <audio id="win-sound" src="sound_effects/win.mp3"></audio>

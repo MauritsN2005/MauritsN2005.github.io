@@ -1,6 +1,6 @@
 {
-  "name": "Connect 4 PWA",
-  "short_name": "C4",
+  "name": "4 op een rij",
+  "short_name": "4 op een rij",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
